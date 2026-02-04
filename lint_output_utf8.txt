@@ -1,0 +1,99 @@
+﻿
+> clothing@0.1.0 lint
+> eslint
+
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\about\page.tsx
+  13:3  warning  'FadeIn' is defined but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\account\page.tsx
+   7:3  warning  'User' is defined but never used          @typescript-eslint/no-unused-vars
+  17:3  warning  'ShoppingCart' is defined but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\page.tsx
+  131:22  warning  'i' is defined but never used                                    @typescript-eslint/no-unused-vars
+  179:29  warning  'i' is defined but never used                                    @typescript-eslint/no-unused-vars
+  231:33  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  231:52  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx
+   11:3   warning  'SlidersHorizontal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   28:3   warning  'ScrollReveal' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  197:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx:197:7
+  195 |     const category = searchParams.get("category");
+  196 |     if (category) {
+> 197 |       setSelectedCategory(category);
+      |       ^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  198 |     }
+  199 |   }, [searchParams]);
+  200 |  react-hooks/set-state-in-effect
+  434:10  warning  'ProductsGrid' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  446:10  warning  'ProductsSkeleton' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\analytics\page.tsx
+   6:3   warning  'TrendingDown' is defined but never used  @typescript-eslint/no-unused-vars
+  15:10  warning  'Button' is defined but never used        @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\coupons\page.tsx
+  15:3   warning  'ChevronLeft' is defined but never used   @typescript-eslint/no-unused-vars
+  16:3   warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+  22:29  warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+  22:41  warning  'CardTitle' is defined but never used     @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\orders\page.tsx
+  7:3  warning  'Filter' is defined but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\products\new\page.tsx
+  10:3  warning  'Upload' is defined but never used  @typescript-eslint/no-unused-vars
+  14:3  warning  'Plus' is defined but never used    @typescript-eslint/no-unused-vars
+  15:3  warning  'Trash2' is defined but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\products\page.tsx
+  21:29  warning  'CardHeader' is defined but never used        @typescript-eslint/no-unused-vars
+  21:41  warning  'CardTitle' is defined but never used         @typescript-eslint/no-unused-vars
+  37:18  warning  'StaggerContainer' is defined but never used  @typescript-eslint/no-unused-vars
+  37:36  warning  'StaggerItem' is defined but never used       @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\app\admin\settings\page.tsx
+   4:10  warning  'motion' is defined but never used            @typescript-eslint/no-unused-vars
+  11:3   warning  'Palette' is defined but never used           @typescript-eslint/no-unused-vars
+  36:17  warning  'session' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\components\shared\footer.tsx
+  5:40  warning  'Mail' is defined but never used        @typescript-eslint/no-unused-vars
+  5:46  warning  'ArrowRight' is defined but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\components\shared\header.tsx
+  14:3   warning  'LogOut' is defined but never used                 @typescript-eslint/no-unused-vars
+  15:3   warning  'Settings' is defined but never used               @typescript-eslint/no-unused-vars
+  23:22  warning  'signOut' is defined but never used                @typescript-eslint/no-unused-vars
+  25:3   warning  'DropdownMenu' is defined but never used           @typescript-eslint/no-unused-vars
+  26:3   warning  'DropdownMenuContent' is defined but never used    @typescript-eslint/no-unused-vars
+  27:3   warning  'DropdownMenuItem' is defined but never used       @typescript-eslint/no-unused-vars
+  28:3   warning  'DropdownMenuLabel' is defined but never used      @typescript-eslint/no-unused-vars
+  29:3   warning  'DropdownMenuSeparator' is defined but never used  @typescript-eslint/no-unused-vars
+  30:3   warning  'DropdownMenuTrigger' is defined but never used    @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\components\shared\theme-toggle.tsx
+  15:21  warning  'theme' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+G:\Companies\DevFlow\Projects\clothing\src\lib\db.ts
+  17:3  warning  Unused eslint-disable directive (no problems were reported from 'no-var')
+
+G:\Companies\DevFlow\Projects\clothing\src\lib\mongodb.ts
+  14:3  warning  Unused eslint-disable directive (no problems were reported from 'no-var')
+
+G:\Companies\DevFlow\Projects\clothing\src\middleware.ts
+  19:22  warning  'req' is defined but never used  @typescript-eslint/no-unused-vars
+
+Ô£û 44 problems (3 errors, 41 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+

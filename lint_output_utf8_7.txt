@@ -1,0 +1,25 @@
+﻿
+> clothing@0.1.0 lint
+> eslint
+
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx
+  515:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx:515:7
+  513 |     const category = searchParams.get("category") || "all";
+  514 |     if (category !== selectedCategory) {
+> 515 |       setSelectedCategory(category);
+      |       ^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  516 |     }
+  517 |   }, [searchParams, selectedCategory]);
+  518 |  react-hooks/set-state-in-effect
+
+Ô£û 1 problem (1 error, 0 warnings)
+

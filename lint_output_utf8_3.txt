@@ -1,0 +1,33 @@
+﻿
+> clothing@0.1.0 lint
+> eslint
+
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx
+   13:10  warning  'Skeleton' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   21:18  warning  'StaggerContainer' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+   21:36  warning  'StaggerItem' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  186:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+G:\Companies\DevFlow\Projects\clothing\src\app\(shop)\products\page.tsx:186:7
+  184 |     const category = searchParams.get("category");
+  185 |     if (category && category !== selectedCategory) {
+> 186 |       setSelectedCategory(category);
+      |       ^^^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  187 |     }
+  188 |   }, [searchParams, selectedCategory]);
+  189 |  react-hooks/set-state-in-effect
+
+G:\Companies\DevFlow\Projects\clothing\src\components\shared\header.tsx
+  14:3  warning  'Plus' is defined but never used    @typescript-eslint/no-unused-vars
+  15:3  warning  'Minus' is defined but never used   @typescript-eslint/no-unused-vars
+  16:3  warning  'Trash2' is defined but never used  @typescript-eslint/no-unused-vars
+
+Ô£û 7 problems (1 error, 6 warnings)
+
