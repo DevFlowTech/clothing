@@ -1,12 +1,9 @@
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI!;
-
-if (!MONGODB_URI) {
-  throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env",
-  );
-}
+// Check logic moved inside connectDB to avoid build-time errors
+// if (!MONGODB_URI) {
+//   throw new Error("Please define the MONGODB_URI environment variable inside .env");
+// }
 
 interface MongooseCache {
   conn: typeof mongoose | null;
@@ -29,6 +26,14 @@ export async function connectDB() {
   }
 
   if (!cached.promise) {
+    const MONGODB_URI = process.env.MONGODB_URI!;
+
+    if (!MONGODB_URI) {
+      throw new Error(
+        "Please define the MONGODB_URI environment variable inside .env",
+      );
+    }
+
     const opts = {
       bufferCommands: false,
     };
