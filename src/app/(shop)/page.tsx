@@ -53,7 +53,7 @@ export default function HomePage() {
               <span className="inline-block text-sm font-bold tracking-widest mb-6 text-gray-500 uppercase">
                 FW / 2026 Collection
               </span>
-              <h1 className="text-7xl md:text-9xl font-black leading-[0.9] tracking-tighter mb-8 uppercase text-black font-sans">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-black leading-[0.9] tracking-tighter mb-8 uppercase text-black font-sans">
                 Street
                 <br />
                 Wear
@@ -99,7 +99,7 @@ export default function HomePage() {
 
         {/* Marquee */}
         <div className="bg-accent border-t-2 border-black overflow-hidden py-3">
-          <div className="animate-marquee whitespace-nowrap flex gap-12 font-black text-2xl uppercase">
+          <div className="animate-marquee whitespace-nowrap flex gap-12 font-black text-lg md:text-2xl uppercase">
             {[...Array(10)].map((_, i) => (
               <span key={i} className="flex items-center gap-4">
                 Global Shipping <Star className="fill-black h-6 w-6" /> Limited
@@ -134,7 +134,7 @@ export default function HomePage() {
             className="h-[400px] relative border-b-2 md:border-b-0 md:border-r-2 border-black last:border-r-0 group cursor-pointer overflow-hidden bg-gray-100"
           >
             <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-              <h2 className="font-sans text-5xl font-black text-white mix-blend-difference group-hover:scale-110 transition-transform duration-500 uppercase tracking-tighter">
+              <h2 className="font-sans text-3xl md:text-5xl font-black text-white mix-blend-difference group-hover:scale-110 transition-transform duration-500 uppercase tracking-tighter">
                 {item.name}
               </h2>
             </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
       {/* PRODUCT LIST */}
       <section className="p-0 border-b-2 border-black">
         <div className="py-12 px-6 flex justify-between items-end border-b-2 border-black bg-white">
-          <h2 className="font-display text-5xl font-black uppercase">
+          <h2 className="font-display text-3xl md:text-5xl font-black uppercase">
             Fresh Gear
           </h2>
           <Link
@@ -230,7 +230,7 @@ export default function HomePage() {
       {/* MANIFESTO / ABOUT */}
       <section className="grid grid-cols-1 lg:grid-cols-2">
         <div className="bg-accent p-12 lg:p-24 border-b-2 lg:border-b-0 lg:border-r-2 border-black flex flex-col justify-center">
-          <h2 className="font-display text-6xl font-black mb-6">
+          <h2 className="font-display text-4xl md:text-6xl font-black mb-6">
             WE BREAK
             <br />
             THE RULES.

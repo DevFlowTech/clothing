@@ -1339,7 +1339,7 @@ function ProductsContent() {
         </FadeIn>
 
         {/* Filters Bar */}
-        <FadeIn delay={0.1} className="flex flex-col gap-6 mb-8 pb-6 border-b">
+        <FadeIn delay={0.1} className="flex flex-col gap-4 mb-8 pb-6 border-b">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <Button
@@ -1417,6 +1417,29 @@ function ProductsContent() {
                 className="overflow-hidden border-2 border-black p-6 bg-secondary/50"
               >
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {/* Category Filter */}
+                  <div className="md:col-span-3">
+                    <h4 className="font-black uppercase tracking-tighter mb-4 text-sm underline decoration-accent decoration-4">
+                      Category
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {categories.map((cat) => (
+                        <Button
+                          key={cat.value}
+                          variant={
+                            selectedCategory === cat.value
+                              ? "default"
+                              : "outline"
+                          }
+                          size="sm"
+                          className="h-8 rounded-none border-2 border-black font-bold text-[10px] uppercase"
+                          onClick={() => handleCategoryChange(cat.value)}
+                        >
+                          {cat.label}
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
                   {/* Price Filter */}
                   <div>
                     <h4 className="font-black uppercase tracking-tighter mb-4 text-sm underline decoration-accent decoration-4">
@@ -1615,7 +1638,7 @@ function ProductCard({ product }: { product: (typeof products)[0] }) {
                 <p className="text-[10px] font-black uppercase tracking-widest text-zinc-500">
                   {product.category}
                 </p>
-                <h3 className="font-bold text-lg uppercase tracking-tighter text-black group-hover:underline underline-offset-4 decoration-2 decoration-accent">
+                <h3 className="font-bold text-sm md:text-lg uppercase tracking-tighter text-black group-hover:underline underline-offset-4 decoration-2 decoration-accent">
                   {product.name}
                 </h3>
               </div>
